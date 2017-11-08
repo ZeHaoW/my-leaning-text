@@ -1,0 +1,118 @@
+char 转int
+char a = '1';
+int b = a-'0';
+
+int 转 char
+int b = 1;
+char c = (char) (b + '0');
+
+String转int
+ String i = "123";
+ int a = Integer.parseInt(i);
+ System.out.println(a);
+
+int 转 String
+int i = 123;
+String s = Integer.toString(i);
+或 String s = i+""
+System.out.println(s);
+
+String 转 Array
+String a = "abc";
+char[] ch = a.toCharArray();
+System.out.println(ch);
+
+java数组赋值
+int[] arr = new int[2];
+arr =new int[]{key, key + 1};
+
+判断类型：
+object instanceof class
+class isInstance(Object obj)
+
+声明字符串(需要改动的情况下)常用方式
+StringBuilder str = new StringBuilder;
+StringBuffer str = new StringBuffer;
+
+向一个字符串后面添加元素
+str.append（元素）
+
+向一个数组后面添加元素
+arr.add()
+
+数组排序
+Arrays.sort(arr)
+
+逐位取反运算符
+num = ~num
+
+一个builtin-function
+Integer.highestOneBit(num)
+输入一个int，返回比这个int小的最大到2的幂次方。如Integer.highestOneBit(17)会返回16.
+
+翻转字符串
+new StringBuilder(str).reverse()
+
+StringBuilder 转 String
+new StringBuilder(str).toString()
+
+将指定的字符串追加在原字符串后面：
+new StringBuilder(str).append(str1)
+
+继承collection接口的，添加方法都用add(),如list，queue，set
+map的添加用put(key, value)
+stringbuilder和stringbuffer用append()
+
+继承collection接口的，求元素个数都用size(),如list，queue，set
+
+
+树的层序遍历拿队列来实现
+
+求平方根
+(int)Math.sqrt(area); 
+求绝对值
+Math.abs(-3.5)=3.5
+
+
+
+List 初始化//array转List：
+Integer [] nums = new Integer[]{1,2,3,4,6,7,8,9};
+List<Integer> list = new ArrayList<>(Arrays.asList(nums)); 
+
+
+new String(arr);数组转字符串
+字符串转数组：char[] arr = s.toCharArray()
+
+十进制转二进制
+Integer.toBinaryString( )
+
+
+
+数组的声明由几种方式：
+
+1，String []a = new String[length];再赋值
+
+a[0]=?;.......
+
+2,new完就直接初始化：
+
+String []a = new String[]{?,?...};
+
+3.你甚至不必new：
+
+String []a = {?,?....}同样没问题。
+
+Arrays.sort()第二个参数可以引入comparator 接口，override其中的ｃｏｍｐａｒｅ方法，实现排序规则的定义。如：
+Arrays.sort(arr, (a, b) -> (b[0]-a[0]));arr 是一个n乘2的数组，排序规则是比较每一个元素的第一个元素的大小，按降序排列（sort()函数默认为按照升序排列）
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,158 @@
+py术语：
+1.列表推导
+2.变量泄露（流畅的P19）
+3.生成器表达式(和列表推导的区别就是一个中括号，一个圆括号)
+4.元组拆包/平行赋值
+5.具名元组（collections.namedtuple(),流畅的P26）
+6.python的排序算法Timsort
+7.内存视图memoryview（流畅的P44）
+8.多维切片
+9.省略（...）
+10.装饰器，迭代器，生成器
+11.归并排序
+12.字典推导
+13.鸭子类型
+14.稀疏数组
+15.assert断言
+
+
+python十进制转其他进制
+print("十进制数为：", dec)
+print("转换为二进制为：", bin(dec))
+print("转换为八进制为：", oct(dec))
+print("转换为十六进制为：", hex(dec))
+
+
+itertools 标准库，combinations方法可以生成全部的组合，combinations(range(10), 2)
+permutations方法可以生成全部的排列，permutations（‘ABCD’， 2）
+
+Python endswith() 方法用于判断字符串是否以指定后缀结尾，如果以指定后缀结尾返回True，否则返回False。可选参数"start"与"end"为检索字符串的开始与结束位置。
+
+hashlib模块可进行密码学的加密
+
+list('123') = ['1', '2', '3']
+dict(a=1,b=2) = {'a': 1, 'b': 2}
+
+collections.namedtuple用来构建只有少数属性但是没有方法的对象。
+collections.deque可以用来构建双端队列，当频繁对序列做先进先出操作时，可以考虑使用它（流畅的P47）
+
+
+random.choice(一个序列)可以随机从序列中提取一个元素出来，前提是这个序列实现了__getitem__方法
+
+reversed(一个序列)可以将一个序列翻转排列。
+
+只有实现了__getitem__方法，才能用【0】这种方式取值
+
+字符串和列表互相转换：
+str = 'abcde'
+ list = list(str)
+list
+['a', 'b', 'c', 'd', 'e']
+str_convert = ''.join(list)
+str_convert
+'abcde'
+
+
+str.count(sub, start= 0,end=len(string))
+count用来数子字符串在字符串中出现了几次
+
+
+list插入：list.insert(index, value)
+list删除：list.remove/del/pop
+list查找：list.index(value)返回值所在的索引
+list清空：list.clear()
+
+python中的数组：import array
+array.array('I', [1,2,3])
+
+
+python中的元组，不仅仅是不变的列表，还包含有数据的数量和位置信息
+
+
+python对list进行排序：
+方法1.用List的成员函数sort进行排序
+方法2.用built-in函数sorted进行排序
+例：
+>>> print sorted([5, 2, 3, 1, 4])
+[1, 2, 3, 4, 5]
+>>> L = [5, 2, 3, 1, 4]
+>>> L.sort()
+>>> print L
+[1, 2, 3, 4, 5]
+
+
+
+Pytho divmod() 函数
+python divmod() 函数把除数和余数运算结果结合起来，返回一个包含商和余数的元组(a // b, a % b)。
+
+
+字符串反向输出
+>>> string = 'bicycle'
+>>> string[::-1]
+'elcycib'
+
+一个序列复制几份再拼接：
+string
+'bicycle'
+>>> string*5
+'bicyclebicyclebicyclebicyclebicycle'
+
+初始化一个嵌套着几个列表的列表：
+>>> l = [['_'] for i in range(3)]
+>>> l
+[['_'], ['_'], ['_']]
+
+
+python排序模块儿：bisect（http://www.cnblogs.com/skydesign/archive/2011/09/02/2163592.html）
+bisect操作的必须是一个已经排序好了的list，有两个功能：
+1.返回要插入的数字的数组下标，但不插入
+2.将数字插入list
+
+
+python中几个做科学计算的库：Scipy，Numpy，Pandas，Blaze
+
+isdigit()的用法
+>>> '1'.isdigit()
+True
+
+
+python学习方法：怎样写代码才能显得pythonic呢？首先要对python十分熟悉，精通大部分函数以及python的特色：比如装饰器，迭代器，生成器等。其次，要多读一些Pythonic的代码，学习别人如何优雅的使用python，推荐去看leetcode
+中的@StefanPochmann的代码。python是一门高效，简单，方便的语言，但这并不意味着你不花时间就可以用的很好
+
+
+dict,defaultdict,OrderedDict（流畅的P57）
+
+hash()求散列值
+
+
+python中的id()方法
+id方法的返回值就是对象的内存地址。
+python中会为每个出现的对象分配内存，哪怕他们的值完全相等（注意是相等不是相同）。如执行a=2.0，b=2.0这两个语句时会先后为2.0这个Float类型对象分配内存，然后将a与b分别指向这两个对象。所以a与b指向的不是同一对象：
+>>> a=2.0
+>>> b=2.0
+>>> a is b
+False
+>>> a==b
+True
+但是为了提高内存利用效率对于一些简单的对象，如一些数值较小的int对象，python采取重用对象内存的办法，如指向a=2，b=2时，由于2作为简单的int类型且数值小，python不会两次为其分配内存，而是只分配一次，然后将a与b同时指向已分配的对象：
+>>> a=2
+>>> b=2
+>>> a is b
+True
+如果赋值的不是2而是大的数值，情况就跟前面的一样了:
+>>> a=5555
+>>> b=5555
+>>> a is b
+False
+>>> id(a)
+12464372
+>>> id(b)
+12464396
+
+
+字典类型有着巨大的内存开销
+优化往往是可维护性的对立面
+
+字典视图：.keys(),.items(),.values()
+
+字典中两个强大的方法：setdefault和update，要理解，还有一个__missing__

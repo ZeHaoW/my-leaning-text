@@ -1,0 +1,2 @@
+修改某次commit　的message
+git commit --amend

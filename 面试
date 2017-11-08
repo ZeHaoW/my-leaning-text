@@ -1,0 +1,5 @@
+swarm是一个docker集群工具，控制了docker的起停。通过jenkins上的一个插件（swarm-client）将docker注册为node，在node上面运行代码。代码运行结束之后，通过filebeat将文件数据传到logstash，然后再通过logstash传到es
+
+elasticsearch是一个基于Lucene的数据库
+mongo：非结构化，非关系型数据库
+redis：数据都在内存中，速度很快
