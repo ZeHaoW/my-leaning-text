@@ -14,6 +14,9 @@ py术语：
 13.鸭子类型
 14.稀疏数组
 15.assert断言
+16.归约函数
+17.lambda匿名函数
+18.函数注解
 
 
 python十进制转其他进制
@@ -156,3 +159,16 @@ False
 字典视图：.keys(),.items(),.values()
 
 字典中两个强大的方法：setdefault和update，要理解，还有一个__missing__
+
+码位<---->字节序列   中间的过程即为编码
+
+python enumerate()函数
+对于一个可迭代的（iterable）/可遍历的对象（如列表、字符串），利用它可以同时获得索引和值
+
+re.finditer(pattern, string[, flags])  
+返回string中所有与pattern相匹配的全部字串，返回形式为迭代器。
+
+python中常用的高阶函数有内置函数sorted，min，max和functools.partial
+functools.partial的作用就是固定住几个参数，返回一个新的函数，这样每次只需填写一个参数值即可，在调用时更简单。
+
+不要试图把语言归为一类，而应该将它们视作特性的聚合

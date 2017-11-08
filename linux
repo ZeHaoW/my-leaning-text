@@ -1,0 +1,4 @@
+切换python版本：pyenv global <版本号>
+**在这台电脑里，我将python切换的命令用alias简化为了py27和py36，通过以下这两条命令：
+echo 'alias py27="pyenv global 2.7.14"\nalias py36="pyenv global 3.6.3"' >> .zshrc
+source .zshrc
