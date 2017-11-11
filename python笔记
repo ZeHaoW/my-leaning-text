@@ -178,3 +178,7 @@ functools.partial的作用就是固定住几个参数，返回一个新的函数
 
 python内置了三个用于装饰方法的函数：property，classmethod，statimethod
 functools.lru_cache装饰器实现了备忘功能，可以用来优化递归算法。（流畅的P168）
+
+collections.Counter()函数，目的是用来跟踪值出现的次数，以字典的键值对形式存储，其中元素作为key，其计数作为value，和count()函数类似
+
+dict.setdefault(v, i)的功能是，如果一个字典中没有v，则将它的值设置为i
