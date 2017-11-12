@@ -189,4 +189,8 @@ y = [4, 5, 6, 7]
 xy = zip(x, y)
 print xy => [(1, 4), (2, 5), (3, 6)]
 
+还有两个非常类似zip()的函数，分别是itertools.izip()和itertools.izip_longest(),具体用法，前者类似zip(),只不过一个返回list，一个返回迭代器。后者则是以较长的字符串为准,其中的fillvalue参数可以用来填补多出来的字符
+
 re.findall('', str)返回一个满足正则的list
+
+python 中，为多个变量赋值时要多用平行赋值
