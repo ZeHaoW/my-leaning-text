@@ -178,3 +178,7 @@ functools.partial的作用就是固定住几个参数，返回一个新的函数
 
 python内置了三个用于装饰方法的函数：property，classmethod，statimethod
 functools.lru_cache装饰器实现了备忘功能，可以用来优化递归算法。（流畅的P168）
+
+字符串大小写转换
+str.upper()
+str.lower()
