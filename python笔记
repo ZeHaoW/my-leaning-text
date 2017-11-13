@@ -18,6 +18,9 @@ py术语：
 17.lambda匿名函数
 18.函数注解
 19.nonlocal，作用是将变量标记为自由变量
+20.可变对象和不可变对象
+21.引用计数
+22.深拷贝和浅拷贝
 
 
 python十进制转其他进制
@@ -178,6 +181,53 @@ functools.partial的作用就是固定住几个参数，返回一个新的函数
 
 python内置了三个用于装饰方法的函数：property，classmethod，statimethod
 functools.lru_cache装饰器实现了备忘功能，可以用来优化递归算法。（流畅的P168）
+
+
+collections.Counter()函数，目的是用来跟踪值出现的次数，以字典的键值对形式存储，其中元素作为key，其计数作为value，和count()函数类似
+
+dict.setdefault(v, i)的功能是，如果一个字典中没有v，则将它的值设置为i
+
+python中的zip()函数的用法(leetcode 696:https://discuss.leetcode.com/topic/107108/python-easy-and-concise-solution-only-2-lines)：
+示例：x = [1, 2, 3]
+y = [4, 5, 6, 7]
+xy = zip(x, y)
+print xy => [(1, 4), (2, 5), (3, 6)]
+
+还有两个非常类似zip()的函数，分别是itertools.izip()和itertools.izip_longest(),具体用法，前者类似zip(),只不过一个返回list，一个返回迭代器。后者则是以较长的字符串为准,其中的fillvalue参数可以用来填补多出来的字符
+
+re.findall('', str)返回一个满足正则的list
+
+python 中，为多个变量赋值时要多用平行赋值
+
+cmp(x,y)比较x和y的大小，x大返回1，x小返回-1，相等返回0（leetcode第七题，用这个函数取正负号）
+
+``符号，可以用来先计算其中表达式的值，再变字符串。相当于str()
+
+可变对象：列表，字典
+不可变对象：数字，字符串，元组
+这里的可变不可变，是指内存中的那块内容是否可以被改变
+
+浅拷贝只拷贝父对象，深拷贝既拷贝父对象，又拷贝子对象，但拷贝子对象的前提是，子对象是容器对象，对于非容器对象，（如数字、字符串、和其他’原子’类型的对象），和浅拷贝无差别
+例：
+a = ['abc', 33, [1,2,3]]
+>>> b = copy.deepcopy(a)
+>>> id(a) == id(b)
+False
+>>> id(a[0]) == id(b[0])
+True
+>>> id(a[1]) == id(b[1])
+True
+>>> id(a[2]) == id(b[2])
+False
+>>> c = copy.copy(a)
+>>> id(a) == id(c)
+False
+>>> id(a[0]) == id(c[0])
+True
+>>> id(a[1]) == id(c[1])
+True
+>>> id(a[2]) == id(c[2])
+True
 
 字符串大小写转换
 str.upper()

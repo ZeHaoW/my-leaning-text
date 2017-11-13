@@ -3,3 +3,10 @@ swarm是一个docker集群工具，控制了docker的起停。通过jenkins上�
 elasticsearch是一个基于Lucene的数据库
 mongo：非结构化，非关系型数据库
 redis：数据都在内存中，速度很快
+
+
+翻转字符串：welcome to beijing翻转成 beijing to welcome
+将二叉搜索树展成双向链表
+给一个数字（十几位），将它表示成汉语，如：1234变成壹仟贰佰叁拾肆
+求二叉树的深度
+判断是否是平衡二叉树
