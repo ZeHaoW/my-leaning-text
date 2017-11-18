@@ -1,2 +1,9 @@
 修改某次commit　的message
 git commit --amend
+git commit 的回退操作：git reset --hard/--soft HEAD^,其中hard参数会将commit上去的新文件给删除掉，而soft参数不会。所以尽量不用hard参数
+
+git add 的回退操作：git reset HEAD + 文件名
+
+如果误删了工作区中的某个文件，需要将其恢复，使用git checkout -- 文件名，如果不知道文件名也没关系，使用 git ls-files --delete来查看即可。
+事实上，git checkout -- 文件名 这个命令的作用是恢复某个受改动的工作区文件至原始状态，不仅仅能处理该文件被删除的情况，还能回退该文件被修改之前
+的状况。
