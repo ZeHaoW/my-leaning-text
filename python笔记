@@ -293,3 +293,13 @@ pos_end: 查找的末尾位置（默认-1）
 
 字符转ASCII:ord('b')
 ASCII转字符:chr(98)
+
+python // 和 / 的区别
+
+python的eval()函数：将字符串str当成有效的表达式来求值并返回计算结果。(leetcode67题)
+
+python 中 any()函数和all()函数,参考633题
+
+判断一个数是不是完全平方数的方法：int(N**.5)**2 == N，参考633题
+
+leetcode 14 题巧用zip()函数，注意里面的参数加不加*的区别
