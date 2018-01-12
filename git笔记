@@ -21,6 +21,6 @@ linux操作快捷键：
   删除光标之前的所有内容：Ctrl+u
 2.定位光标至行首：Ctrl+a
   删除光标之后的所有内容：ctrl+k
-
+3.屏幕截图 gnome-screenshot -ac 功能是选定需要截的屏幕，复制到剪贴板
 
 NewTone Method
