@@ -321,3 +321,10 @@ lambda a, b: a ^ b 和 operator.xor作用相同
 @property装饰器，作用是将一些属性变为只读，如示例9-7（流畅的p214），其实就是将一个方法特殊化，变得看起来像是一个属性，可以用obj.attr来调用它，省略了后面的括号。但如果你对它赋值，会报异常
 
 猴子补丁：在运行时修改类或者模块儿，而不直接修改源码
+
+可以使用decimal模块来设置计算的精度
+例子：
+>>> from decimal import *
+>>> getcontext().prec = 6
+>>> Decimal(1) / Decimal(7)
+Decimal('0.142857')
