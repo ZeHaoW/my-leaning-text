@@ -7,3 +7,20 @@ git add 的回退操作：git reset HEAD + 文件名
 如果误删了工作区中的某个文件，需要将其恢复，使用git checkout -- 文件名，如果不知道文件名也没关系，使用 git ls-files --delete来查看即可。
 事实上，git checkout -- 文件名 这个命令的作用是恢复某个受改动的工作区文件至原始状态，不仅仅能处理该文件被删除的情况，还能回退该文件被修改之前
 的状况。
+
+git diff origin/master 可以看目前工作区的文件和远程的区别，无论这个修改是否ｃｏｍｍｉｔ
+
+sublime操作快捷键：
+1.定位光标至行尾：end
+2.定位光标至行首：home
+
+
+
+linux操作快捷键：
+1.定位光标至行尾：Ctrl+e
+  删除光标之前的所有内容：Ctrl+u
+2.定位光标至行首：Ctrl+a
+  删除光标之后的所有内容：ctrl+k
+3.屏幕截图 gnome-screenshot -ac 功能是选定需要截的屏幕，复制到剪贴板
+
+NewTone Method

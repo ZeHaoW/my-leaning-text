@@ -191,7 +191,7 @@ python内置了三个用于装饰方法的函数：property，classmethod，stat
 functools.lru_cache装饰器实现了备忘功能，可以用来优化递归算法。（流畅的P168）
 
 
-collections.Counter()函数，目的是用来跟踪值出现的次数，以字典的键值对形式存储，其中元素作为key，其计数作为value，和count()函数类似
+collections.Counter() 函数，目的是用来跟踪值出现的次数，以字典的键值对形式存储，其中元素作为key，其计数作为value，和count()函数类似
 
 dict.setdefault(v, i)的功能是，如果一个字典中没有v，则将它的值设置为i
 
@@ -272,3 +272,59 @@ strip()方法，用于移除字符串头尾指定的字符（默认为空格）
 re.sub('正则表达式，表示被替换部分', '替换字符串', str)
 
 a*2可以用<<来进行代替。判断a的奇偶（a%2），可以用a&1来代替
+
+
+正则表达式的内联匹配模式（(?i) (?s) (?m) (?is) (?im)）：
+ (?i) 表示所在位置右侧的表达式开启忽略大小写模式
+ (?s) 表示所在位置右侧的表达式开启单行模式。(?s)通常在匹配有换行的文本时使用
+
+
+ 完全匹配
+ search 和 match的区别
+
+ str 的find方法：
+函数原型：find(str, pos_start, pos_end)
+解释：
+str:被查找“字串”
+pos_start:查找的首字母位置（从0开始计数。默认：0）
+pos_end: 查找的末尾位置（默认-1）
+返回值：如果查到：返回查找的第一个出现的位置。否则，返回-1。
+
+
+字符转ASCII:ord('b')
+ASCII转字符:chr(98)
+
+python // 和 / 的区别
+
+python的eval()函数：将字符串str当成有效的表达式来求值并返回计算结果。(leetcode67题)
+
+python 中 any()函数和all()函数,参考633题
+
+判断一个数是不是完全平方数的方法：int(N**.5)**2 == N，参考633题
+
+leetcode 14 题巧用zip()函数，注意里面的参数加不加*的区别
+
+
+math.hypot(x, y)作用是求根号x方加y方
+
+python中的__getattr__方法在解释器中是如何被调用的？（流畅的P237）
+属性查找失败的时候，解释器会调用__getattr__方法。
+
+functools.reduce()的使用（流畅的P240）
+
+lambda a, b: a ^ b 和 operator.xor作用相同
+
+抽象基类的用途：实现接口时作为超类使用
+
+协议：非正式的接口，是python这种动态类型语言实现多态的方式
+
+@property装饰器，作用是将一些属性变为只读，如示例9-7（流畅的p214），其实就是将一个方法特殊化，变得看起来像是一个属性，可以用obj.attr来调用它，省略了后面的括号。但如果你对它赋值，会报异常
+
+猴子补丁：在运行时修改类或者模块儿，而不直接修改源码
+
+可以使用decimal模块来设置计算的精度
+例子：
+>>> from decimal import *
+>>> getcontext().prec = 6
+>>> Decimal(1) / Decimal(7)
+Decimal('0.142857')
