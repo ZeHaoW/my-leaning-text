@@ -328,3 +328,11 @@ lambda a, b: a ^ b 和 operator.xor作用相同
 >>> getcontext().prec = 6
 >>> Decimal(1) / Decimal(7)
 Decimal('0.142857')
+
+''.join(list)当中，list中的元素必须为string类型
+
+collections.Counter(s)s是字符串。的用法是：快速生成一个字典并返回，其中的key是s中的每个不重复字符，value是个数
+
+>>> 'a b c'.split()
+['a', 'b', 'c']
+
