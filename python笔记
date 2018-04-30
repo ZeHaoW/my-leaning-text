@@ -72,7 +72,7 @@ str.count(sub, start= 0,end=len(string))
 count用来数子字符串在字符串中出现了几次
 
 
-list插入：list.insert(index, value)
+list插入：list.insert(index, value)/append/extend
 list删除：list.remove/del/pop
 list查找：list.index(value)返回值所在的索引
 list清空：list.clear()
