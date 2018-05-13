@@ -24,3 +24,9 @@ linux操作快捷键：
 3.屏幕截图 gnome-screenshot -ac 功能是选定需要截的屏幕，复制到剪贴板
 
 NewTone Method
+
+//修改全局仓库下用户名和邮箱
+
+git config --global user.email   “邮箱”
+
+git config --global user.name  “用户名”

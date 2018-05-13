@@ -105,14 +105,17 @@ String []a = {?,?....}同样没问题。
 Arrays.sort()第二个参数可以引入comparator 接口，override其中的ｃｏｍｐａｒｅ方法，实现排序规则的定义。如：
 Arrays.sort(arr, (a, b) -> (b[0]-a[0]));arr 是一个n乘2的数组，排序规则是比较每一个元素的第一个元素的大小，按降序排列（sort()函数默认为按照升序排列）
 
+java求最大值：Math.max
+pathon求最大值：max
 
+java求数组长度：arr.length
+java求字符串长度：str.length()
+python求数组/字符串长度：len(str/arr)
 
+java声明数组要用大括号，而python是中括号。
 
+java中的static指的是静态，在一个类中定义一个方法为static，那就是说，无需本类的对象即可调用此方法。如果一个类中的方法没有static修饰，想要在别处使用就要先建对象。
 
-
-
-
-
-
+非静态方法不能在静态方法中被调用，也就是说public方法或private方法，无法在public static中被调用。
 
 
