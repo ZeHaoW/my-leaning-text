@@ -128,3 +128,17 @@ python : str[i]
 返回字符串中的子字符串：
 java ： str.substring(int beginIndex, int endIndex)
 python:str[i:j]
+
+数组排序：
+java：Arrays.sort()
+python:arr.sort[] 或 sorted(arr)
+
+在java的逻辑运算符中，有这么四类：&&（短路与），&（与），|（或），||（短路或）
+java二进制位运算与就只能用&，或就只能用|
+python在位运算上同java是一样的
+
+
+java数组声明和初始化
+int[] a = {1,2,3};
+int[] a = new int[2];
+int[] a = new int[]{1,2,3};
