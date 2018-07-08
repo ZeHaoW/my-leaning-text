@@ -147,3 +147,14 @@ String类型无法修改某个位置上的字符，因此最好用char[]数据�
 
 
 bitmap算法处理大数据
+
+char转String： String s = String.valueOf('c'); 
+
+while(iterator.hasNext()){
+         list.add(iterator.next());
+    }
+
+java中的Iterator
+
+
+-1的有符号整数在计算机中的表示是0xffffffff
